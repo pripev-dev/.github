@@ -1,0 +1,65 @@
+name: Bug report
+description: Something behaves differently from how it is documented or intended.
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Before you fill this in: if the problem involves access to a capsule, a private
+        link, a secret, or anyone's real family material, close this and use
+        [SECURITY.md](https://github.com/pripev-dev/.github/blob/main/SECURITY.md)
+        instead.
+
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened
+      description: What you did, and what you got.
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: What you expected instead
+      description: If a document or a comment says otherwise, link to it.
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: How to reproduce it
+      description: |
+        Steps, a failing command, or a fixture. Use synthetic material - never a real
+        family recording, transcript or photograph, and never a real capsule ID.
+      placeholder: |
+        1.
+        2.
+        3.
+    validations:
+      required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: Version or commit
+      description: Tag, commit SHA, or "main as of <date>".
+    validations:
+      required: true
+
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      description: Operating system, runtime version, browser - whatever is relevant.
+
+  - type: checkboxes
+    id: confirmations
+    attributes:
+      label: Before submitting
+      options:
+        - label: This report contains no real family material and no secrets.
+          required: true
+        - label: This is not a security or privacy issue.
+          required: true

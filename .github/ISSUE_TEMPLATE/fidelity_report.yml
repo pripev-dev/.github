@@ -1,0 +1,71 @@
+name: Fidelity problem
+description: The page says something the recording did not, or loses something it did.
+labels: ["fidelity"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        This is the most important kind of report this project can receive. The product
+        promises that a recipe stays as it was told - so a page that invents, corrects,
+        flattens or drops something is a defect in the thing we actually sell, not a
+        cosmetic complaint.
+
+        **Describe what happened in your own words. Do not attach the recording, the
+        transcript, or the page.** If reproducing it needs family material, use
+        [SECURITY.md](https://github.com/pripev-dev/.github/blob/main/SECURITY.md).
+
+  - type: dropdown
+    id: kind
+    attributes:
+      label: What went wrong
+      options:
+        - Something was invented that was never said
+        - Something said was silently corrected or standardised
+        - Something said was dropped
+        - Uncertainty was presented as certain
+        - A story, aside or sign-off was treated as noise
+        - Household language was replaced with a normalised measurement
+        - An unapproved fragment reached the page
+        - Something else
+    validations:
+      required: true
+
+  - type: textarea
+    id: source
+    attributes:
+      label: What the source actually contained
+      description: Paraphrase it. Do not paste the transcript.
+    validations:
+      required: true
+
+  - type: textarea
+    id: output
+    attributes:
+      label: What the page produced
+      description: Paraphrase it. A description is enough.
+    validations:
+      required: true
+
+  - type: input
+    id: language
+    attributes:
+      label: Language of the recording
+      description: Include both if the speaker moved between languages.
+    validations:
+      required: true
+
+  - type: textarea
+    id: fixture
+    attributes:
+      label: A synthetic fixture that shows it, if you can make one
+      description: |
+        A short invented transcript reproducing the same failure is the single most
+        useful thing you can attach, and it can be committed as a test.
+
+  - type: checkboxes
+    id: confirmations
+    attributes:
+      label: Before submitting
+      options:
+        - label: This report contains no real recording, transcript, image or capsule ID.
+          required: true

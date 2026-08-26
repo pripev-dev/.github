@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Security or privacy problem
+    url: https://github.com/pripev-dev/.github/blob/main/SECURITY.md
+    about: Anything touching access, private capsules, secrets, or someone's family material. Report it privately - never in a public issue.
+  - name: Question about how something works
+    url: https://github.com/orgs/pripev-dev/discussions
+    about: Ask here rather than opening an issue.
+  - name: How we build, and what the product will not do
+    url: https://github.com/pripev-dev/.github/blob/main/CONTRIBUTING.md
+    about: Read before proposing a change to editorial behaviour.
